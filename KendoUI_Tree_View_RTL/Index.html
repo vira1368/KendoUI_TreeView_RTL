@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.rtl.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.mobile.all.min.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+</head>
+<body class="k-rtl">
+  
+    <div id="treeview"></div>
+
+    <script>
+      $("#treeview").kendoTreeView({
+        dataSource: [
+          { text: "1", items: [
+            { text: "11", items: [
+            { text: "111" },
+            { text: "112" },
+            { text: "113" },
+            { text: "114" }
+          ] },
+            { text: "12" },
+            { text: "13", items: [
+            { text: "131" },
+            { text: "132" },
+            { text: "133" },
+            { text: "134" }
+          ] },
+            { text: "14", items: [
+            { text: "141" },
+            { text: "142" },
+            { text: "143" },
+            { text: "144" }
+          ] }
+          ] },
+          { text: "2", items: [
+            { text: "21", items: [
+            { text: "211" },
+            { text: "212" },
+            { text: "213" },
+            { text: "214" }
+          ] },
+            { text: "22", items: [
+            { text: "221" },
+            { text: "222" },
+            { text: "223" },
+            { text: "224" }
+          ] },
+            { text: "23", items: [
+            { text: "231" },
+            { text: "232" },
+            { text: "233" },
+            { text: "234" }
+          ] },
+            { text: "24", items: [
+            { text: "241" },
+            { text: "242" },
+            { text: "243" },
+            { text: "244" }
+          ] }
+          ] },
+          { text: "3", items: [
+            { text: "31", items: [
+            { text: "311" },
+            { text: "312" },
+            { text: "313" },
+            { text: "314" }
+          ] },
+            { text: "32" },
+            { text: "33", items: [
+            { text: "331" },
+            { text: "332" },
+            { text: "333" },
+            { text: "334" }
+          ] },
+            { text: "34", items: [
+            { text: "341" },
+            { text: "342" },
+            { text: "343" },
+            { text: "344" }
+          ] }
+          ] },
+          { text: "4", items: [
+            { text: "41", items: [
+            { text: "411" },
+            { text: "412" },
+            { text: "413" },
+            { text: "414" }
+          ] },
+            { text: "42" },
+            { text: "43", items: [
+            { text: "431" },
+            { text: "432" },
+            { text: "433" },
+            { text: "434" }
+          ] },
+            { text: "44", items: [
+            { text: "441" },
+            { text: "442" },
+            { text: "443" },
+            { text: "444" }
+          ] }
+          ] }
+        ]
+      });
+
+    </script>
+
+
+    <style>
+      body {
+        font-size: 12px;
+      }
+
+      .k-treeview .k-top,
+      .k-treeview .k-mid,
+      .k-treeview .k-bot {
+        background-image: url('treeview-nodes.png');
+        background-repeat: no-repeat;
+        margin-right: 16px;
+        padding-right: 40px;
+        margin-left: : -16px;
+        padding-left: : 16px;
+      }
+
+      .k-treeview .k-item { background-image: url('treeview-line.png'); }
+      .k-treeview .k-last { background-image: none; }
+
+      .k-treeview>.k-group>.k-item.k-first>.k-top { background-position: 1290px 0px; }
+      .k-treeview>.k-group>.k-item>.k-group>.k-item>.k-top { background-position: 1202px -66px; }
+      .k-treeview>.k-group>.k-item>.k-group>.k-item>.k-group>.k-item>.k-top { background-position: 1245px 1px; }
+      .k-treeview>.k-group>.k-item.k-first>.k-group>.k-item>.k-group>.k-item>.k-top { background-position: 1245px 1px; }
+
+      .k-treeview>.k-group>.k-item>.k-mid { background-position: 1246px -45px; }
+      .k-treeview>.k-group>.k-item>.k-group>.k-item>.k-mid { background-position: 1202px -66px; }
+      .k-treeview>.k-group>.k-item>.k-group>.k-item>.k-group>.k-item>.k-mid { background-position: 1201px -43px; }
+      .k-treeview>.k-group>.k-item.k-first>.k-group>.k-item>.k-group>.k-item>.k-mid { background-position: 1201px -43px; }
+
+      .k-treeview>.k-group>.k-item.k-last>.k-bot { background-position: 1268px -21px; }
+      .k-treeview>.k-group>.k-item>.k-group>.k-item.k-last>.k-bot { background-position: 1247px -21px; }
+      .k-treeview>.k-group>.k-item>.k-group>.k-item>.k-group>.k-item>.k-bot { background-position: 1223px -22px; }
+      .k-treeview>.k-group>.k-item.k-first>.k-group>.k-item>.k-group>.k-item>.k-bot { background-position: 1223px -22px; }
+      
+      .k-treeview .k-item {
+        background-repeat: no-repeat;
+        background-position: 1292px 1px;
+      }
+
+      .k-treeview .k-item .k-group .k-item {
+        background-repeat: no-repeat;
+        background-position: 1271px 1px;
+      }
+
+      .k-treeview .k-item .k-group .k-item .k-group .k-item {
+        background-repeat: no-repeat;
+        background-position: 1247px 1px;
+      }
+
+      .k-treeview .k-first {
+        background-repeat: no-repeat;
+        background-position: 1292px 16px;
+      }
+
+    </style>
+</body>
+</html>
